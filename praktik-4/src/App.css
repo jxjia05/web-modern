@@ -1,0 +1,77 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #f5f5f5;
+  background-color: #222;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Judul */
+h1 {
+  margin-bottom: 40px;
+  color: #9b7bff;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Container untuk isi (Counter dan Form) */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Box style */
+.counter-container,
+.form-container {
+  width: 300px;
+  background-color: #2e2e2e;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Tombol Counter */
+.counter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Form styling */
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+input {
+  background-color: #3a3a3a;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding: 8px;
+  width: 200px;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+button {
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}

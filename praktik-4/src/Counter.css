@@ -1,0 +1,18 @@
+.counter {
+  text-align: center;
+  margin-top: 30px;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ff6f91;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff8fa3;
+}
