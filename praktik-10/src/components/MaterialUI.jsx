@@ -1,5 +1,5 @@
 import React from "react";
-import  { Button, Typography, Box, CardContent } from "@mui/material";
+import  { Button, Typography, Box, Card, CardContent } from "@mui/material";
 
 const MaterialUi = () => {
     return  (
