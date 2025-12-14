@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import './App.css';
+import UserProfile from './components/UserProfile';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const userData = {
+    name: "Sarah Johnson",
+    email: "sarah@example.com",
+    avatar: "/vite.svg",
+    joinDate: "2023-01-15",
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="App">
+      <h1>Demo JSX dan Rendering</h1>
+
+      {/* Toggle login state */}
+      <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
+        {isLoggedIn ? 'Logout' : 'Login'}
+      </button>
+
+      {/* Component dengan conditional rendering */}
+      <UserProfile user={userData} isLoggedIn={isLoggedIn} />
+
+      {/* Dynamic styling */}
+      <div style={{
+        padding: '20px',
+        margin: '10px 0',
+        border: `2px solid ${isLoggedIn ? '#c3e6cb' : '#f5c6cb'}`,
+        backgroundColor: isLoggedIn ? '#d4edda' : '#f8d7da',
+        borderRadius: '5px'
+      }}>
+        Status: {isLoggedIn ? '✅ Berhasil login' : '❌ Belum login'}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
