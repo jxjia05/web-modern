@@ -18,7 +18,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #7d5b5b; /* dark background like the screenshot */
+  background: rgba(red, green, blue, alpha); /* dark background like the screenshot */
   color: #f1f1f1;
 }
 
